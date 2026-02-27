@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>disci-app</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="header">
+      <h1 class="logo">disci-app</h1>
+      <div class="xp-info">
+        <span class="rank" id="rank-badge">Novice</span>
+        <div class="xp-bar-wrap">
+          <div class="xp-bar" id="xp-bar"></div>
+        </div>
+        <span class="xp-label"><span id="total-xp">0</span> XP</span>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="card">
+        <h2>Nueva Mision</h2>
+        <div class="form">
+          <input type="text" id="mission-name" placeholder="Nombre" />
+          <input type="text" id="mission-desc" placeholder="Descripcion" />
+          <div class="diff-group">
+            <button class="diff-btn active" data-diff="easy"   onclick="selectDiff(this)">Facil <span>+10 XP</span></button>
+            <button class="diff-btn"        data-diff="normal" onclick="selectDiff(this)">Normal <span>+25 XP</span></button>
+            <button class="diff-btn"        data-diff="hard"   onclick="selectDiff(this)">Dificil <span>+50 XP</span></button>
+          </div>
+          <button class="submit-btn" onclick="addMission()">Agregar mision</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="list-header">
+          <h2>Misiones</h2>
+          <div class="counters">
+            <span id="active-count">0</span> activas &nbsp;·&nbsp;
+            <span id="done-count">0</span> completadas
+          </div>
+        </div>
+        <ul class="mission-list" id="mission-list">
+          <li class="empty" id="empty-state">No hay misiones aun.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
