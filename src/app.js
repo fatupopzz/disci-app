@@ -8,6 +8,8 @@ const state = {
 const XP_VALUES = { easy: 10, normal: 25, hard: 50 };
 
 const RANKS = [
+  { min: 1000, label: "Gigachad" },
+  { min: 500, label: "Megachad" },
   { min: 200, label: "Megaknight" },
   { min: 50, label: "Knight" },
   { min: 0, label: "Noobie" },
@@ -133,7 +135,7 @@ function updateXP() {
       ((state.totalXP - rank.min) / (next.min - rank.min)) * 100,
     );
   } else {
-    pct = Math.min(100, (state.totalXP / 200) * 100);
+    pct = Math.min(100, (state.totalXP / 1000) * 100);
   }
 
   document.getElementById("xp-bar").style.width = pct + "%";
