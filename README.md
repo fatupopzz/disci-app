@@ -7,6 +7,10 @@ A habit-tracking app with gamification. Create missions, complete them, and earn
 
 Built with plain HTML, CSS, and JavaScript — no libraries or frameworks. ALSO RUNS ON NGINX
 
+## Demo
+
+https://youtu.be/n69axuanyfo
+
 ## Installation
 
 ```bash
