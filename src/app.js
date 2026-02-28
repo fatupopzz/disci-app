@@ -8,9 +8,9 @@ const state = {
 const XP_VALUES = { easy: 10, normal: 25, hard: 50 };
 
 const RANKS = [
-  { min: 200, label: "Archmage" },
-  { min: 50, label: "Sorcerer" },
-  { min: 0, label: "Novice" },
+  { min: 200, label: "Megaknight" },
+  { min: 50, label: "Knight" },
+  { min: 0, label: "Noobie" },
 ];
 
 function getRank(xp) {
